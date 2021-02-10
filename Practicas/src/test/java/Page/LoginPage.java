@@ -7,21 +7,27 @@ public class LoginPage {
 
     WebDriver driver;
 
-    By sigIn = By.id("btn1");
 
+    By btnIngresar = By.id("enterimg");
+    /*
+    By sigIn = By.id("btn2");
     By email = By.xpath("/html/body/div/div/div[2]/input");
     By pass = By.xpath("/html/body/div/div/div[3]/input");
     By enter = By.id("enterbtn");
+     */
 
     public LoginPage(WebDriver driver){
 
         this.driver = driver;
     }
 
-    public void setSigIn(){
+    public void btnIngresar(){
 
-        driver.findElement(sigIn).click();
+        driver.findElement(btnIngresar).click();
     }
+
+
+
 
 
 
