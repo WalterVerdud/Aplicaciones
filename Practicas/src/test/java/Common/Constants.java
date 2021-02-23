@@ -9,6 +9,10 @@ public class Constants {
     public static String ChromeDriver = "src/test/resources/Driver/chromedriver.exe";
 
 
+    // Path archivos adjuntos
+    public static String ArchivoAdjunto = "src/test/resources/ArchivosAdjuntos/Spidy.png";
+
+
 
 
 }
