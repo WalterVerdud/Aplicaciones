@@ -1,5 +1,6 @@
 package Tests;
 
+import Helpers.Helpers;
 import Page.BasePage;
 import Page.LoginPage;
 import Page.RegisterPage;
@@ -19,56 +20,40 @@ public class RegisterTest extends BasePage {
     public void register() throws InterruptedException {
         LoginPage loginPage = new LoginPage(driver);
         RegisterPage registerPage= new RegisterPage(driver);
+        Helpers helpers = new Helpers();
+
+        System.out.println(driver.getCurrentUrl());
+
 
         loginPage.btnIngresar();
         registerPage.Nombre();
-        Thread.sleep(3000);
         registerPage.Apellido();
-        Thread.sleep(3000);
         //registerPage.Imagen();
         registerPage.Mail();
-        Thread.sleep(3000);
         registerPage.Telefono();
-        Thread.sleep(3000);
+        helpers.sleepSeconds(3);
         registerPage.Genero();
-        Thread.sleep(3000);
         registerPage.ElegirPais();
-        Thread.sleep(3000);
+        helpers.sleepSeconds(3);
         registerPage.Pais();
-        Thread.sleep(3000);
+        helpers.sleepSeconds(3);
         registerPage.SeleccionarAnio();
-        Thread.sleep(3000);
         registerPage.Anio();
-        Thread.sleep(3000);
         registerPage.SeleccionarMes();
-        Thread.sleep(3000);
         registerPage.Mes();
-        Thread.sleep(3000);
         registerPage.SeleccionarDia();
-        Thread.sleep(3000);
         registerPage.Dia();
-        Thread.sleep(3000);
         registerPage.Pass();
-        Thread.sleep(3000);
         registerPage.ConfirmaPass();
-        Thread.sleep(3000);
         registerPage.Ingresar();
-        Thread.sleep(6000);
-
-
-
-
-
-
+        helpers.sleepSeconds(8);
     }
-
 
     @AfterTest
     public void cerrar() {
         closeBrowser();
 
     }
-
 
 
 }

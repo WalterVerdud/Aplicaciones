@@ -1,6 +1,5 @@
 package Page;
 
-import Common.Constants;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -17,7 +16,7 @@ public class RegisterPage {
     By selecPais = By.id("countries");
     By pais = By.xpath("//*[@id=\"countries\"]/option[12]");
     By selecAño = By.xpath("//*[@id=\"yearbox\"]");
-    By año = By.xpath("//*[@id=\"yearbox\"]/option[76]");
+    By año = By.xpath("//*[@id='yearbox']/option[76]");
     By selecMes = By.xpath("//*[@id=\"basicBootstrapForm\"]/div[11]/div[2]/select");
     By mes = By.xpath("//*[@id=\"basicBootstrapForm\"]/div[11]/div[2]/select/option[2]");
     By selecDia = By.xpath("//*[@id=\"daybox\"]");
@@ -36,9 +35,9 @@ public class RegisterPage {
     public void Apellido(){
         driver.findElement(apellido).sendKeys("Verdud");
     }
-    public void Imagen(){
-        driver.findElement(imagen).sendKeys(Constants.ArchivoAdjunto);
-    }
+    //public void Imagen(){
+      //  driver.findElement(imagen).sendKeys(Constants.ArchivoAdjunto);
+    //}
     public void Mail(){
         driver.findElement(mail).sendKeys("walter@mail.com");
     }
